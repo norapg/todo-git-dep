@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm ci && npm run build
+      - run: npm install && npm run build # ← ここを npm install に変更！
         env:
           # GitHub Actionsのビルド時に必要な環境変数を記述（直接書いても、GitHubのSecretsに入れてもOK）
           VITE_SUPABASE_URL: https://taylayhxueysickwxihj.supabase.co/rest/v1/
